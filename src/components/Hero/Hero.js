@@ -13,7 +13,7 @@ import img9 from "../../assets/img/image30.jpg";
 function Hero() {
   return (
     <>
-      <section>
+      <section className="hero">
         <div className="container">
           <div className="hero-img-grid">
             <img src={img1} alt="img1" />

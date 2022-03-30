@@ -1,0 +1,46 @@
+.card {
+  font-size: 0.75rem;
+  line-height: 0.8125rem;
+  font-weight: 300;
+  width: fit-content;
+  width: 33%;
+  .image__wrap {
+    position: relative;
+    margin-bottom: 0.5625rem;
+    & img {
+      border-radius: $main-border-radius;
+      width: 100%;
+      height: 275px;  
+      object-fit: cover;
+    }
+  }
+  .image__label {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    padding: 5px;
+    text-transform: uppercase;
+    background-color: $white;
+    border-radius: $secondary-border-radius;
+  }
+  .card__stats {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    margin-bottom: 0.5rem;
+    .card__star {
+    }
+    .card__stat {
+    }
+    .card__rev-count {
+      color: $secondary-txt-color;
+    }
+    .card__country {
+      color: $secondary-txt-color;
+    }
+  }
+  .card__info {
+  }
+  .card__price {
+  }
+}
