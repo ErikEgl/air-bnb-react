@@ -35,11 +35,12 @@
     .card__rev-count {
       color: $secondary-txt-color;
     }
-    .card__country {
+    .card__location {
       color: $secondary-txt-color;
     }
   }
   .card__info {
+    line-height: 1;
   }
   .card__price {
   }
