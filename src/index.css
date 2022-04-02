@@ -3,7 +3,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  color: #2B283A;
+  color: #222222;
 }
 
 *, *::before, *::after {
@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  color: #2B283A;
+  color: #000000;
   font-size: 2.25rem;
 }
 
@@ -27,81 +27,115 @@ p {
 }
 
 header {
-  background-color: #F55A5A;
   padding: 22px 0;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
-header nav {
-  display: flex;
-  justify-content: center;
+
+.hero {
+  padding: 26px 0;
 }
-header nav a {
-  display: flex;
-  gap: 1rem;
-  color: #ffffff;
-  text-decoration: none;
+.hero .hero-img-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .hero .hero-img-grid {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero .hero-img-grid {
+    width: 50%;
+  }
+}
+.hero .hero-img-grid img {
+  width: 100%;
+}
+.hero .hero-img-grid img:nth-child(1) {
+  grid-area: 2/1/6/2;
+}
+.hero .hero-img-grid img:nth-child(2) {
+  grid-area: 1/2/3/3;
+}
+.hero .hero-img-grid img:nth-child(3) {
+  grid-area: 3/2/7/3;
+}
+.hero .hero-img-grid img:nth-child(4) {
+  grid-area: 2/3/5/4;
+}
+.hero .hero-img-grid img:nth-child(5) {
+  grid-area: 6/3/9/4;
+  margin-top: -50px;
+}
+.hero .hero-img-grid img:nth-child(6) {
+  grid-area: 1/4/4/5;
+}
+.hero .hero-img-grid img:nth-child(7) {
+  grid-area: 4/4/7/5;
+}
+.hero .hero-img-grid img:nth-child(8) {
+  grid-area: 1/5/4/6;
+}
+.hero .hero-img-grid img:nth-child(9) {
+  grid-area: 5/5/8/6;
+}
+
+.info {
+  padding: 15px 0;
 }
 
 .card {
   font-size: 0.75rem;
+  line-height: 0.8125rem;
   font-weight: 300;
-  display: flex;
-  gap: 1.5rem;
-  line-height: 1;
-  flex-direction: column;
+  width: fit-content;
+  width: 33%;
 }
-@media screen and (min-width: 500px) {
-  .card {
-    flex-direction: row;
-  }
+.card .image__wrap {
+  position: relative;
+  margin-bottom: 0.5625rem;
 }
-.card img {
+.card .image__wrap img {
   border-radius: 0.5625rem;
   width: 100%;
-  height: auto;
+  height: 275px;
   object-fit: cover;
 }
-@media screen and (min-width: 500px) {
-  .card img {
-    width: 125px;
-  }
-}
-.card .card__place-wrap {
-  display: flex;
-  gap: 1rem;
-}
-.card .card__place {
-  color: #2B283A;
+.card .image__label {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 5px;
   text-transform: uppercase;
-  letter-spacing: 0.375rem;
-  display: flex;
-  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 2px;
 }
-.card .card__place-link {
+.card .card__stats {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  margin-bottom: 0.5rem;
+}
+.card .card__stats .card__rev-count {
   color: #918E9B;
 }
-.card .card__title {
-  hyphens: auto;
-  font-size: 1.5625rem;
-  font-weight: bold;
-  color: #2B283A;
+.card .card__stats .card__location {
+  color: #918E9B;
 }
-.card .card__date {
-  display: flex;
-  gap: 1rem;
-  color: #2B283A;
+.card .card__info {
+  line-height: 1;
 }
-.card .card__text {
-  color: #2B283A;
-}
-
 .cards {
   padding: 20px 0;
 }
 .cards .container {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
